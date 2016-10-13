@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 # Time: O(n^2)
@@ -22,7 +23,7 @@
 class Solution:
     def threesum(self, nums):
         """
-        nums: [int]kfvdtrw4y43rt
+        nums: [int]
         """
         # sort array
         nums = sorted(nums)
@@ -39,11 +40,16 @@ class Solution:
                         k -= 1
                     else:
                         result.append([nums[i], nums[j], nums[k]])
+                        print result
                         j = j + 1
                         k = k - 1
                         while j < k and nums[j] == nums[j-1]:
                             j += 1
                         while j < k and nums[k] == nums[k+1]:
                             k -= 1
-            
+
         return result
+
+if __name__ == '__main__':
+    result = Solution().threesum([-1,0,1,2,-1,-4])
+    # print result

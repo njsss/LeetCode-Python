@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 """
 # Time:  O(n)
 # Space: O(n)
@@ -19,11 +21,11 @@ class Solution(object):
     def twosum(self, nums, target):
         """
         ([int], int) --> [int]
-        
+
         nums: list of numbers
         target: target of sum
         return: indices of two numbers
-        
+
         >>> nums = [2, 7, 11, 15]
         >>> target = 9
         >>> twosum(nums, target)
@@ -34,8 +36,9 @@ class Solution(object):
             if (target-num) in lut:
                 return ([lut[target-num],i])
             lut[num] = i
-        
+
         return []
-        
+
 if __name__ == "__main__":
-    print Solution().twosum([2,7,11,15],9)
+    res = (Solution().twosum([2,7,11,15],9))
+    print(res)
